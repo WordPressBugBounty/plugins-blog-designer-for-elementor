@@ -2,12 +2,12 @@
 /**
  * Plugin Name:       Blog Designer For Elementor
  * Plugin URI:        https://theimran.com/blog-designer-for-elementor-page-builder
- * Description:       Blog Designer Has been built for Elementor Page Builder. Blog Designer can be use with any theme from stores. you can design each and every part of the layout.
- * Version:           1.0.8
+ * Description:       Blog Designer for Elementor is the ultimate solution for crafting a professional blog page, exclusively using Elementor. This versatile plugin comes packed with powerful features to enhance your blog’s appearance and functionality.
+ * Version:           1.0.9
  * Requires at least: 5.2
- * Requires PHP:      7.2
- * Author:            Theimran WordPress Shop
- * Author URI:        https://theimran.com
+ * Requires PHP:      5.6
+ * Author:            RS WP THEMES
+ * Author URI:        https://rswpthemes.com
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       bdfe
@@ -29,8 +29,7 @@ if (!defined('bdfe_VERSION')) {
 	define('bdfe_VERSION', $bdfe_version);
 }
 
-require BDFE_PLUGIN_PATH . 'class-gamajo-template-loader.php';
-require BDFE_PLUGIN_PATH . 'bdfe-template-loader.php';
+
 require BDFE_PLUGIN_PATH . 'inc/admin/admin.php';
 require BDFE_PLUGIN_PATH . 'widgets/about-me.php';
 
@@ -192,7 +191,7 @@ final class BlogDesignerForElementor {
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor */
 			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', BDFE_TEXT_DOMAIN ),
-			'<strong>' . esc_html__( 'Blog Maker For Elementor', BDFE_TEXT_DOMAIN ) . '</strong>',
+			'<strong>' . esc_html__( 'Blog Designer For Elementor', BDFE_TEXT_DOMAIN ) . '</strong>',
 			'<strong>' . esc_html__( 'Elementor', BDFE_TEXT_DOMAIN ) . '</strong>'
 		);
 
@@ -359,3 +358,17 @@ function bdfe_add_elementor_widget_categories( $elements_manager ) {
 add_action( 'elementor/elements/categories_registered', 'bdfe_add_elementor_widget_categories' );
 
 // add_filter( 'wp_lazy_loading_enabled', '__return_false' );
+
+add_action( 'init', 'bdfe_admin_init' );
+
+function bdfe_admin_init() {
+    $showRswpbsBanner = true;
+    $getRswpThemesSlug = get_stylesheet();
+    $rswpThemes = array('book-review-blog', 'book-author-blog', 'electronic-store', 'author-personal-blog', 'book-blogger', 'author-portfolio', 'author-blog', 'book-author-template', 'faith-blog', 'tech-blogging', 'minimalblog', 'one-elementor', 'fitness-blog', 'writers-portfolio' );
+    if (in_array($getRswpThemesSlug, $rswpThemes)) {
+        $showRswpbsBanner = false;
+    }
+    if (!class_exists('Rswpbs') && true === $showRswpbsBanner) {
+        require BDFE_PLUGIN_PATH . '/inc/install-rswpbs/install-rswpbs.php';
+    }
+}

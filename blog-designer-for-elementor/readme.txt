@@ -1,13 +1,13 @@
-=== Blog Designer For Elementor ===
-Contributors: mdimran41
-Tags: Wordpress Blog, Blog Design, Blog layout, blog template, custom blog template, blog layout design, responsive blog, custom blog layout, modify blog design, responsive blog layout, blog, design, site design, posts in page, blog in page, timeline blog template, classical blog template, Blog Designer For Elementor, Elementor Page Builder, elementor addons, post grid, grid post, grid layout, post grids, post slider, post carousel, responsive post slider, recent post slider, featured post slider, popular post slider
-Stable tag: 1.0.8
+=== Blog Designer For Elementor - Post Slider, Post Carousel, Post Grid ===
+Contributors: mdimran41, rswpthemes
+Tags: elementor blog template, blog designer for elementor, blog post carousel elementor, blog post slider, elementor post slider
+Stable tag: 1.0.9
 Requires at least: 5.0
-Tested up to: 6.3.1
+Tested up to: 6.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Blog Designer is All in One Solution for Blogs. it's comes with Post Carousel, Post Slider, Post Blocks, Blog Page with Pagination.
+Blog Designer for Elementor is the ultimate solution for crafting a professional blog page, exclusively using Elementor. This versatile plugin comes packed with powerful features to enhance your blog’s appearance and functionality.
 
 == Description ==
 
@@ -108,7 +108,7 @@ You can design as many as you want. all options are available for design.
 
 
 = For Fast Support, Feature Request, and Bug Reporting =
->Ask us at either via our [__Support Forum__](https://theimran.com/support-forum/)
+>Ask us at either via our [__Support Forum__](https://rswpthemes.com/support-forum/)
 
 = Author =
-Designed and Developed by [__theimran__](https://theimran.com/)
+Designed and Developed by [__RSWPTHEMES__](https://rswpthemes.com/)
