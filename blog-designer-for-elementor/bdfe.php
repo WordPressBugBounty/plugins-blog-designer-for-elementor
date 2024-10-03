@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name:       Blog Designer For Elementor
- * Plugin URI:        https://theimran.com/blog-designer-for-elementor-page-builder
+ * Plugin URI:
  * Description:       Blog Designer for Elementor is the ultimate solution for crafting a professional blog page, exclusively using Elementor. This versatile plugin comes packed with powerful features to enhance your blog’s appearance and functionality.
- * Version:           1.0.9
+ * Version:           1.1.0
  * Requires at least: 5.2
  * Requires PHP:      5.6
  * Author:            RS WP THEMES
@@ -11,7 +11,6 @@
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       bdfe
- * Domain Path:       /languages
  */
 
 if (!defined('BDFE_TEXT_DOMAIN')) {
