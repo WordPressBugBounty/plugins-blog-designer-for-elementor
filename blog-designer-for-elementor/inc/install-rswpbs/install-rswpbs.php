@@ -14,20 +14,14 @@ class RswpbsInstaller {
                 <div class="close-popup">
                     <div class="rswpbs-banner-close"><span class="dashicons dashicons-no-alt"></span></div>
                 </div>
-                <div class="blog-designer-for-elementor-ad-image image-left">
-                     <img src="<?php echo esc_url(BDFE_PLUGIN_URL . 'inc/install-rswpbs/author-portfolio-pro-thumb.png');?>" alt="<?php esc_attr_e('RS WP BOOK SHOWCASE', 'blog-designer-for-elementor');?>">
-                </div>
                 <div class="blog-designer-for-elementor-ad-content">
-                    <h2><?php esc_html_e('Take Your Book Display to the Next Level!', 'blog-designer-for-elementor'); ?></h2>
-                    <p><?php esc_html_e('Do you feature books on your website? Make them stand out with the RS WP Book Showcase Plugin – a must-have plugin for authors, bloggers, and publishers.', 'blog-designer-for-elementor'); ?></p>
-                    <ul>
-                        <li>✅ <?php esc_html_e('Showcase your books in a stunning, organized layout.', 'blog-designer-for-elementor'); ?></li>
-                        <li>✅ <?php esc_html_e('Customize it to fit your website\'s unique style.', 'blog-designer-for-elementor'); ?></li>
-                        <li>✅ <?php esc_html_e('Boost engagement with a user-friendly, mobile-responsive design.', 'blog-designer-for-elementor'); ?></li>
-                    </ul>
-                    <p><?php esc_html_e('And the best part? It\'s FREE to install!', 'blog-designer-for-elementor'); ?></p>
-                    <p><strong><?php esc_html_e('Unlock a beautiful book showcase with just one click.', 'blog-designer-for-elementor'); ?></strong><br>
-                    <?php esc_html_e('Click', 'blog-designer-for-elementor'); ?> <strong><?php esc_html_e('Install Now', 'blog-designer-for-elementor'); ?></strong> <?php esc_html_e('and start transforming your book display today!', 'blog-designer-for-elementor'); ?></p>
+                    <div class="blog-designer-for-elementor-ad-image image-left">
+                         <img src="<?php echo esc_url(BDFE_PLUGIN_URL . 'inc/install-rswpbs/author-portfolio-pro-thumb.png');?>" alt="<?php esc_attr_e('RS WP BOOK SHOWCASE', 'blog-designer-for-elementor');?>">
+                    </div>
+                    <h2><?php esc_html_e('Enhance Your Website with RS WP Book Showcase Plugin!', 'blog-designer-for-elementor'); ?></h2>
+                    <p><?php echo esc_html__('Do you have a collection of books or literary works to showcase on your website? With the ', 'blog-designer-for-elementor') . '<strong>' . esc_html__('RS WP Book Showcase Plugin', 'blog-designer-for-elementor') . '</strong>' . esc_html__(', you can easily display your books in stunning layouts, create beautiful book galleries, and even provide detailed descriptions with purchase links. It\'s the perfect tool for authors, publishers, and bloggers who want to present their books in an elegant and professional way. Start attracting more readers and book lovers today!', 'blog-designer-for-elementor'); ?></p>
+                </div>
+                <div class="blog-designer-for-elementor-ad-button-wrapper">
                     <a class="rswpbs-install" href="#"><?php esc_html_e('Install Now', 'blog-designer-for-elementor'); ?></a>
                     <a class="rswpbs-learn-more" target="_blank" href="<?php echo esc_url('https://rswpthemes.com/rs-wp-book-showcase-wordpress-plugin/');?>"><?php esc_html_e('View Details', 'blog-designer-for-elementor'); ?></a>
                 </div>

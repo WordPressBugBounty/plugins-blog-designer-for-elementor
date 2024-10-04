@@ -3,7 +3,7 @@
  * Plugin Name:       Blog Designer For Elementor
  * Plugin URI:
  * Description:       Blog Designer for Elementor is the ultimate solution for crafting a professional blog page, exclusively using Elementor. This versatile plugin comes packed with powerful features to enhance your blog’s appearance and functionality.
- * Version:           1.1.0
+ * Version:           1.1.1
  * Requires at least: 5.2
  * Requires PHP:      5.6
  * Author:            RS WP THEMES
