@@ -3,7 +3,7 @@
  * Plugin Name:       Blog Designer For Elementor
  * Plugin URI:
  * Description:       Blog Designer for Elementor is the ultimate solution for crafting a professional blog page, exclusively using Elementor. This versatile plugin comes packed with powerful features to enhance your blog’s appearance and functionality.
- * Version:           1.1.1
+ * Version:           1.1.2
  * Requires at least: 5.2
  * Requires PHP:      5.6
  * Author:            RS WP THEMES
@@ -357,17 +357,3 @@ function bdfe_add_elementor_widget_categories( $elements_manager ) {
 add_action( 'elementor/elements/categories_registered', 'bdfe_add_elementor_widget_categories' );
 
 // add_filter( 'wp_lazy_loading_enabled', '__return_false' );
-
-add_action( 'init', 'bdfe_admin_init' );
-
-function bdfe_admin_init() {
-    $showRswpbsBanner = true;
-    $getRswpThemesSlug = get_stylesheet();
-    $rswpThemes = array('book-review-blog', 'book-author-blog', 'electronic-store', 'author-personal-blog', 'book-blogger', 'author-portfolio', 'author-blog', 'book-author-template', 'faith-blog', 'tech-blogging', 'minimalblog', 'one-elementor', 'fitness-blog', 'writers-portfolio' );
-    if (in_array($getRswpThemesSlug, $rswpThemes)) {
-        $showRswpbsBanner = false;
-    }
-    if (!class_exists('Rswpbs') && true === $showRswpbsBanner) {
-        require BDFE_PLUGIN_PATH . '/inc/install-rswpbs/install-rswpbs.php';
-    }
-}
