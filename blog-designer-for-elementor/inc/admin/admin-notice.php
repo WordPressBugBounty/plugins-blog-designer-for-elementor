@@ -3,6 +3,9 @@
  * RS WP Book Showcase Promotion Content
  */
 function bdfe_rswpbs_promoting_notice() {
+    if (class_exists('Rswpbs')) {
+        return;
+    }
     // Check if the transient exists, and only show the notice if it doesn't.
     if (!get_transient('bdfe_rswpbs_promoting_notice_dismissed')) {
         ?>
@@ -80,7 +83,9 @@ function bdfe_rswpbs_promoting_notice() {
         <?php
     }
 }
+
 add_action('admin_notices', 'bdfe_rswpbs_promoting_notice');
+
 
 /**
  * RS WP Book Showcase Notice Transiant

@@ -3,7 +3,7 @@
  * Plugin Name:       Blog Designer For Elementor
  * Plugin URI:
  * Description:       Design stunning blog layouts with Elementor! Easily customize and style your WordPress blog with this plugin.
- * Version:           1.1.3
+ * Version:           1.1.4
  * Requires at least: 5.2
  * Requires PHP:      5.6
  * Author:            RS WP THEMES
