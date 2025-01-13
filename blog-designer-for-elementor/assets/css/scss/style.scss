@@ -101,8 +101,11 @@
     margin-bottom: 2rem;
     position: relative;
     transition: .4s;
+    .align-self-stretch &{
+        margin-bottom: 0;
+        height: 100%;
+    }
     @include commoncss;
-
     &__content-wrapper {
         padding: 1.6rem;
     }
@@ -181,4 +184,8 @@
         }
     }
 
+}
+
+.blog-grid-layout.align-self-stretch{
+    margin-bottom: 30px;
 }

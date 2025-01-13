@@ -48,25 +48,9 @@
             });
         });
     };
-    var MasonryBlogLayouts = function($scope, $) {
-        var masonaryactive = $('.masonaryactive');
-        masonaryactive.imagesLoaded(function() {
-            masonaryactive.masonry({
-                itemSelector: '.blog-grid-layout',
-                margin: '50px',
-                percentPosition: true,
-            });
-        });
-    }
+
     $(window).on('elementor/frontend/init', function() {
         elementorFrontend.hooks.addAction('frontend/element_ready/hero_slider.default', HeroSlider);
     });
-
-    $(window).on('elementor/frontend/init', function() {
-
-            elementorFrontend.hooks.addAction('frontend/element_ready/post_layouts.default', MasonryBlogLayouts);
-
-    });
-
 
 })(jQuery);

@@ -69,6 +69,9 @@ class bdfe_Posts_Layouts extends Widget_Base {
 		return [ 'blogmaker' ];
 	}
 
+	public function get_script_depends() {
+		return [ 'masonry', 'imagesloaded', 'bdfe-masonry-init' ];
+	}
 	/**
 	 * Register oEmbed widget controls.
 	 *
@@ -101,7 +104,7 @@ class bdfe_Posts_Layouts extends Widget_Base {
 				'options' => $select_post_categories,
 			]
 		);
-		
+
 		$this->add_control(
 			'posts_count',
 			[
@@ -151,7 +154,7 @@ class bdfe_Posts_Layouts extends Widget_Base {
 				'label_off'    => __( 'Hide', BDFE_TEXT_DOMAIN ),
 				'return_value' => 'true',
 				'default'      => 'true',
-				
+
 			]
 		);
 		$this->add_control(
@@ -175,7 +178,7 @@ class bdfe_Posts_Layouts extends Widget_Base {
 				'label' => __( 'Columns', BDFE_TEXT_DOMAIN ),
 				'type' => Controls_Manager::SELECT,
 				'multiple' => false,
-				'default' => 'two',
+				'default' => 'three',
 				'options' => [
 					'one' => __( 'One Column', BDFE_TEXT_DOMAIN ),
 					'two' => __( 'Two Column', BDFE_TEXT_DOMAIN ),
@@ -717,7 +720,7 @@ class bdfe_Posts_Layouts extends Widget_Base {
 				],
 			]
 		);
-		
+
 		$this->add_group_control(
 			Group_Control_Border::get_type(),
 			[
@@ -1072,7 +1075,7 @@ class bdfe_Posts_Layouts extends Widget_Base {
 				'selector' => '{{WRAPPER}} .theimran-post-layout-one__read-more a:hover',
 			]
 		);
-		
+
 		$this->end_controls_tab();
 		$this->end_controls_tabs();
 		$this->end_controls_section();
@@ -1081,7 +1084,7 @@ class bdfe_Posts_Layouts extends Widget_Base {
 			[
 				'label' => __( 'Pagination', BDFE_TEXT_DOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE,
-				
+
 			]
 		);
 		$this->start_controls_tabs(
@@ -1123,7 +1126,7 @@ class bdfe_Posts_Layouts extends Widget_Base {
 				],
 			]
 		);
-		
+
 		$this->add_group_control(
 			Group_Control_Border::get_type(),
 			[
@@ -1175,7 +1178,7 @@ class bdfe_Posts_Layouts extends Widget_Base {
 				],
 				'separator' => 'before',
 			]
-		);	
+		);
 
 		$this->end_controls_tab();
 		$this->start_controls_tab(
@@ -1289,7 +1292,7 @@ class bdfe_Posts_Layouts extends Widget_Base {
 							echo '</div>'; //End Content Wrapper
 						echo '</div>'; // end single post wrapper
 					echo '</div>'; // End column
-			endwhile; 
+			endwhile;
 			echo '</div>'; //end row
 			$this->bdfe_render_pagination($paged, $bdfe_post_query);
 		endif; wp_reset_postdata();
@@ -1325,7 +1328,7 @@ class bdfe_Posts_Layouts extends Widget_Base {
 			<div class="theimran-post-layout-one__title">
 				<h3><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
 			</div>
-		<?php endif; 
+		<?php endif;
 	}
 	public function bdfe_render_excerpt(){
 		$settings = $this->get_settings_for_display();
@@ -1435,5 +1438,5 @@ class bdfe_Posts_Layouts extends Widget_Base {
 			<?php
 		endif;
 	}
-	
+
 }

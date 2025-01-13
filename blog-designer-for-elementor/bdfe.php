@@ -2,8 +2,8 @@
 /**
  * Plugin Name:       Blog Designer For Elementor
  * Plugin URI:
- * Description:       Blog Designer for Elementor is the ultimate solution for crafting a professional blog page, exclusively using Elementor. This versatile plugin comes packed with powerful features to enhance your blog’s appearance and functionality.
- * Version:           1.1.2
+ * Description:       Design stunning blog layouts with Elementor! Easily customize and style your WordPress blog with this plugin.
+ * Version:           1.1.3
  * Requires at least: 5.2
  * Requires PHP:      5.6
  * Author:            RS WP THEMES
@@ -22,14 +22,15 @@ if (!defined('BDFE_PLUGIN_URL')) {
 if (!defined('BDFE_PLUGIN_PATH')) {
 	define('BDFE_PLUGIN_PATH', plugin_dir_path( __file__ ));
 }
+
 $getplugindata = get_file_data(__FILE__, array('Version' => 'Version'), false);
 $bdfe_version = $getplugindata['Version'];
 if (!defined('bdfe_VERSION')) {
 	define('bdfe_VERSION', $bdfe_version);
 }
 
-
 require BDFE_PLUGIN_PATH . 'inc/admin/admin.php';
+require BDFE_PLUGIN_PATH . 'inc/admin/admin-notice.php';
 require BDFE_PLUGIN_PATH . 'widgets/about-me.php';
 
 final class BlogDesignerForElementor {
@@ -162,16 +163,22 @@ final class BlogDesignerForElementor {
 		add_action( 'elementor/widgets/widgets_registered', [ $this, 'init_widgets' ] );
 		// add_action( 'elementor/controls/controls_registered', [ $this, 'init_controls' ] );
 		add_action( 'wp_enqueue_scripts', [$this, 'bdfe_enqueue_scripts'], 10 );
+		// add_action('elementor/editor/after_enqueue_scripts', [$this, 'enqueue_custom_elementor_script'], 10);
 
 	}
-
+	public function enqueue_custom_elementor_script() {
+	    // Enqueue script for Elementor editor only
+	    // if (defined('ELEMENTOR_VERSION')) {
+	        // wp_enqueue_script('masonry');
+	        // wp_enqueue_script('bdfe-masonry-init', BDFE_PLUGIN_URL . 'assets/js/masonry-init.js', array( 'jquery' ), null, true);
+	    // }
+	}
 	public function bdfe_enqueue_scripts(){
 		wp_enqueue_style( 'fontawesome', BDFE_PLUGIN_URL . 'assets/css/fontawesome/fontawesome.css' );
 		wp_enqueue_style( 'bdfe-style', BDFE_PLUGIN_URL . 'assets/css/style.css' );
-		wp_enqueue_script( 'masonry');
 		wp_enqueue_script( 'owl-carousel', BDFE_PLUGIN_URL . 'assets/js/owl-carousel.min.js', array( 'jquery' ), null, true );
-		wp_enqueue_script( 'imagesloaded.pkgd', BDFE_PLUGIN_URL . 'assets/js/imagesloaded.pkgd.min.js', array( 'jquery' ), null, true );
 		wp_enqueue_script( 'bdfe-main', BDFE_PLUGIN_URL . 'assets/js/main.js', array( 'jquery' ), null, true );
+		wp_register_script( 'bdfe-masonry-init', BDFE_PLUGIN_URL . 'assets/js/masonry-init.js', array( 'jquery' ), null, true );
 	}
 
 	/**
@@ -357,3 +364,12 @@ function bdfe_add_elementor_widget_categories( $elements_manager ) {
 add_action( 'elementor/elements/categories_registered', 'bdfe_add_elementor_widget_categories' );
 
 // add_filter( 'wp_lazy_loading_enabled', '__return_false' );
+
+
+add_action('admin_head', function() {
+    $current_screen = get_current_screen();
+    if ($current_screen && $current_screen->id === 'toplevel_page_rswpthemes-blog-designer') {
+        remove_all_actions('admin_notices');
+        remove_all_actions('all_admin_notices');
+    }
+});

@@ -2,15 +2,14 @@
 add_action( 'admin_menu', 'bdfe_welcome_page_menu' );
 function bdfe_welcome_page_menu(){
 	add_menu_page(
-		__('Blog Design Tutorial', 'bdfe')
-		, __('Blog Design Tutorial'),
+		__('Elementor Blog Designer', 'bdfe')
+		, __('Elementor Blog Designer'),
 		'manage_options',
 		'rswpthemes-blog-designer',
 		'bdfe_welcome_page',
 		'dashicons-layout',
 		60
 	);
-
 }
 function bdfe_welcome_page(){
 	?>
@@ -32,7 +31,7 @@ function bdfe_welcome_page(){
 add_action( 'admin_enqueue_scripts', 'bdfe_admin_welcome_page_scripts', 10, 1 );
 
 function bdfe_admin_welcome_page_scripts(){
-	if (admin_url('theimran-blog-designer')) {
+	if (admin_url('rswpthemes-blog-designer')) {
 		wp_enqueue_style( 'bdfe_welcome_page', BDFE_PLUGIN_URL . 'assets/admin/admin.css' );
 	}
 }

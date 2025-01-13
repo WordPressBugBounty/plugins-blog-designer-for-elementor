@@ -5157,6 +5157,10 @@ html {
   position: relative;
   transition: 0.4s;
 }
+.align-self-stretch .theimran-post-layout-one {
+  margin-bottom: 0;
+  height: 100%;
+}
 .theimran-post-layout-one img {
   display: block;
 }
@@ -5272,6 +5276,10 @@ html {
 .theimran-post-layout-one__excerpt p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+.blog-grid-layout.align-self-stretch {
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
