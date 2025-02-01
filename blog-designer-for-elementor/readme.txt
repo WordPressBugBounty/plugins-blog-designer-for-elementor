@@ -1,10 +1,11 @@
 === Blog Designer For Elementor - Post Slider, Post Carousel, Post Grid ===
 Contributors: mdimran41, rswpthemes
 Tags: elementor blog template, blog designer for elementor, blog post carousel elementor, blog post slider, elementor post slider
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 Requires at least: 5.0
-Tested up to: 6.6
+Tested up to: 6.7
 License: GPLv3
+Elementor tested up to: 3.27.2
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Blog Designer for Elementor is the ultimate solution for crafting a professional blog page, exclusively using Elementor. This versatile plugin comes packed with powerful features to enhance your blog’s appearance and functionality.

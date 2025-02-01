@@ -1,17 +1,19 @@
 <?php
 /**
- * Plugin Name:       Blog Designer For Elementor
- * Plugin URI:
- * Description:       Design stunning blog layouts with Elementor! Easily customize and style your WordPress blog with this plugin.
- * Version:           1.1.4
- * Requires at least: 5.2
- * Requires PHP:      5.6
- * Author:            RS WP THEMES
- * Author URI:        https://rswpthemes.com
- * License:           GPL v2 or later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       bdfe
+ * Plugin Name:          Blog Designer For Elementor
+ * Plugin URI:           https://rswpthemes.com
+ * Description:          Design stunning blog layouts with Elementor! Easily customize and style your WordPress blog with this plugin.
+ * Version:              1.1.5
+ * Requires at least:    5.2
+ * Requires PHP:         5.6
+ * Author:               RS WP THEMES
+ * Author URI:           https://rswpthemes.com
+ * License:              GPL v2 or later
+ * License URI:          https://www.gnu.org/licenses/gpl-2.0.html
+ * Elementor tested up to: 3.27.2
+ * Text Domain:          bdfe
  */
+
 
 if (!defined('BDFE_TEXT_DOMAIN')) {
 	define('BDFE_TEXT_DOMAIN', 'bdfe');
