@@ -1,7 +1,7 @@
 === Blog Designer For Elementor - Post Slider, Post Carousel, Post Grid ===
 Contributors: mdimran41, rswpthemes
 Tags: elementor blog template, blog designer for elementor, blog post carousel elementor, blog post slider, elementor post slider
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 Requires at least: 5.0
 Tested up to: 6.7
 License: GPLv3
@@ -113,3 +113,10 @@ You can design as many as you want. all options are available for design.
 
 = Author =
 Designed and Developed by [__RSWPTHEMES__](https://rswpthemes.com/)
+
+
+== Changelog ==
+
+= 1.1.6 =
+* Added Optin Form
+* Solved small bugs

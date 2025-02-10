@@ -3,7 +3,7 @@
  * Plugin Name:          Blog Designer For Elementor
  * Plugin URI:           https://rswpthemes.com
  * Description:          Design stunning blog layouts with Elementor! Easily customize and style your WordPress blog with this plugin.
- * Version:              1.1.5
+ * Version:              1.1.6
  * Requires at least:    5.2
  * Requires PHP:         5.6
  * Author:               RS WP THEMES
@@ -13,7 +13,6 @@
  * Elementor tested up to: 3.27.2
  * Text Domain:          bdfe
  */
-
 
 if (!defined('BDFE_TEXT_DOMAIN')) {
 	define('BDFE_TEXT_DOMAIN', 'bdfe');
@@ -34,6 +33,7 @@ if (!defined('bdfe_VERSION')) {
 require BDFE_PLUGIN_PATH . 'inc/admin/admin.php';
 require BDFE_PLUGIN_PATH . 'inc/admin/admin-notice.php';
 require BDFE_PLUGIN_PATH . 'widgets/about-me.php';
+require BDFE_PLUGIN_PATH . 'inc/opt-in/opt-in.php';
 
 final class BlogDesignerForElementor {
 
